@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Roboto&display=swap');
+body {
+    background-color: #996829;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image {
+    flex: 1;
+    padding: 15px;
+    filter: blur(2px);
+  }
+  
+  .content {
+    flex: 2;
+    padding: 10px;
+  }
+  
+  .navigation {
+    background-color: #290964;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .navigation nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .navigation nav ul li {
+    margin-right: 10px;
+  }
+  
+  .navigation nav ul li a {
+    display: block; 
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .navigation nav ul li a:hover {
+    background-color: black; 
+  }
+
+  

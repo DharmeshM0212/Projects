@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <style>
+      body {
+        background-image:url("/static/images/dashboard.jpg"); ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        padding: 0px 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Crime Detection</h1>
+      <form method="POST" action="/dashboard" enctype="multipart/form-data">
+        <input type="file" name="image" accept=".jpg, .png, .jpeg" />
+        <input type="submit" value="Upload and Predict" />
+      </form>
+      {% if prediction %}
+      <div class="prediction">
+        <h2>Prediction: {{ prediction }}</h2>
+      </div>
+      {% endif %}
+    </div>
+    <div class="container">
+      <h2 style="margin-right: 5px">ABOUT</h2>
+      <hr />
+      <p class="indent">
+        CNNs are designed to mimic the visual processing capabilities of the human brain. They consist of multiple layers, including convolutional layers, pooling layers, and fully connected layers. 
+        In the context of crime classification, CNNs can be employed to analyze images related to criminal activities, such as surveillance footage, crime scene photographs, or suspect images. 
+        By training the CNN on a large dataset of labeled crime-related images, it learns to automatically extract discriminative features that are indicative of different types of crimes.
+      </p>
+    </div>
+  </body>
+</html>
